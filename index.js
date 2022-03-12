@@ -51,7 +51,7 @@ const server = http
         let rawData = '';
         req
           .on('data', chunk => {
-            rawData = rawData + chunk;
+            rawData += chunk;
           })
           .on('end', () => {
             const qs = require('querystring');
